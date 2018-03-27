@@ -19,8 +19,10 @@ export class AppComponent {
     new Task('Add README file to last few Angular repos on Github', 2)
   ];
 
-  editTask() {
-    alert("Time to edit a task!");
+  selectedTask: Task = this.tasks[0];
+
+  editTask(clickedTask) {
+    this.selectedTask = clickedTask;
   }
 
   priorityColor(currentTask) {
@@ -32,5 +34,5 @@ export class AppComponent {
       return "bg-info";
     }
   }
-  
+
 }
