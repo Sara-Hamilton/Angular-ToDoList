@@ -18,4 +18,8 @@ export class AppComponent {
     new Task('Begin brainstorming possible JavaScript group projects.'),
     new Task('Add README file to last few Angular repos on Github')
   ];
+
+  editTask() {
+    alert("Time to edit a task!");
+  }
 }
