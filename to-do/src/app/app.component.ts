@@ -13,7 +13,7 @@ export class AppComponent {
   month: number = this.currentTime.getMonth() + 1;
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
-  selectedTask: Task = null;
+  selectedTask = null;
 
   masterTaskList: Task[] = [
     new Task("Finished weekend Angular homework for Epicodus course", 3),
