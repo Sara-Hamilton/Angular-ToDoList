@@ -14,9 +14,4 @@ export class NewTaskComponent  {
     this.sendTask.emit(newTask);
   }
 
-  // constructor() { }
-  //
-  // ngOnInit() {
-  // }
-
 }

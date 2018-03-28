@@ -14,9 +14,4 @@ export class EditTaskComponent {
     this.clickedDone.emit();
   }
 
-  // constructor() { }
-  //
-  // ngOnInit() {
-  // }
-
 }
