@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { Task } from '../models/task.model';
 
 @Component({
   selector: 'app-new-task',
   templateUrl: './new-task.component.html',
   styleUrls: ['./new-task.component.css']
 })
-export class NewTaskComponent implements OnInit {
+export class NewTaskComponent  {
+  @Output() sendTask = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit() {
+  submitForm(description: string, priority: string) {
+    let newTask: Task = new Task(description, parseInt(priority));
+    this.sendTask.emit(newTask);
   }
+
+  // constructor() { }
+  //
+  // ngOnInit() {
+  // }
 
 }
