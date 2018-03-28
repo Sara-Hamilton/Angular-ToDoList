@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { TestComponentComponent } from './test-component/test-component.component';
 import { FormsModule } from '@angular/forms';
 import { TaskListComponent } from './task-list/task-list.component';
 
@@ -11,7 +10,6 @@ import { TaskListComponent } from './task-list/task-list.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponentComponent,
     TaskListComponent
   ],
   imports: [
