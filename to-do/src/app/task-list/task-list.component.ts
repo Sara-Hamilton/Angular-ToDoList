@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from '../models/task.model';
 
 @Component({
@@ -8,6 +8,7 @@ import { Task } from '../models/task.model';
 })
 export class TaskListComponent {
   @Input() childTaskList: Task[];
+  @Output() clickSender = new EventEmitter();
 
   // constructor() { }
 
@@ -26,6 +27,10 @@ export class TaskListComponent {
     } else {
       return "bg-info";
     }
+  }
+
+  editButtonClicked(taskToEdit: Task) {
+    this.clickSender.emit(taskToEdit);
   }
 
 }
